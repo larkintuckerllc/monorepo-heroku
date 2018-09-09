@@ -1,0 +1,12 @@
+{
+  "name": "monorepo-heroku",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build-ts": "lerna run build-ts",
+    "postinstall": "npm run bootstrap && npm run build-ts"
+  },
+  "devDependencies": {
+    "lerna": "^3.3.0"
+  }
+}
