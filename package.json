@@ -4,7 +4,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build-ts": "lerna run build-ts",
-    "postinstall": "npm run bootstrap && npm run build-ts"
+    "lint": "lerna run lint",
+    "postinstall": "npm run bootstrap && npm run build-ts",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "lerna": "^3.3.0"

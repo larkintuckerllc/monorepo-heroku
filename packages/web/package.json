@@ -5,8 +5,10 @@
   "main": "dist/server.js",
   "scripts": {
     "build-ts": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "start": "npm run serve",
     "serve": "node dist/server.js",
+    "test": "echo \"PLACEHOLDER\"",
     "watch-node": "nodemon dist/server.js",
     "watch-ts": "tsc -w"
   },
