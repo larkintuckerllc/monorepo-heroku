@@ -6,7 +6,7 @@
     "clean": "lerna clean",
     "build-ts": "lerna run build-ts",
     "lint": "lerna run lint",
-    "postinstall": "npm run bootstrap && ls -al packages/web/node_modules/.bin",
+    "postinstall": "npm run bootstrap && ls -l packages/web/node_modules/.bin",
     "test": "lerna run test"
   },
   "devDependencies": {
