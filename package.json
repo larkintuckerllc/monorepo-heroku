@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
     "build-ts": "lerna run build-ts",
     "lint": "lerna run lint",
     "postinstall": "npm run bootstrap && npm run build-ts",
