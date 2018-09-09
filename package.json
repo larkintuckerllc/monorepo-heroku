@@ -7,7 +7,6 @@
     "postinstall": "npm run bootstrap && npm run build-ts"
   },
   "devDependencies": {
-    "lerna": "^3.3.0",
-    "typescript": "3.0.1"
+    "lerna": "^3.3.0"
   }
 }
