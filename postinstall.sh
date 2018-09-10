@@ -2,7 +2,6 @@ IFS=$'\n'
 npm run bootstrap
 exit_status=$?
 if [ $exit_status -eq 0 ]; then
-  npm run lerna -- changed
   if [ -f build ]; then
     echo "POSTINSTALL: Building packages in build file"
     while read -r package; do
