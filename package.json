@@ -6,7 +6,7 @@
     "clean": "lerna clean",
     "build-ts": "lerna run build-ts",
     "lint": "lerna run lint",
-    "postinstall": "npm run bootstrap && npm run build-ts",
+    "postinstall": "sh postinstall.sh",
     "test": "lerna run test"
   },
   "devDependencies": {
