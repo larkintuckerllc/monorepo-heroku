@@ -4,7 +4,10 @@ exit_status=$?
 if [ $exit_status -eq 0 ]; then
   if [ -f build ]; then
     echo "POSTINSTALL: Building packages in build file"
-    read -a packages < build
+    packages=()
+    while read -r line; do
+      packages+=($line)
+    done < build
     for package in "${packages[@]}"; do
       if [ -d "packages/$package" ]; then
         echo "POSTINSTALL: Building $packages"
