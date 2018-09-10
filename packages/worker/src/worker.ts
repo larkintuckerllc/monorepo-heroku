@@ -9,7 +9,7 @@ try {
   queue.process('mytype', (job, done) => {
     switch (job.data.letter) {
       case 'a':
-        done(null, 'apple');
+        done(null, 'avocado');
         break;
       default:
         done(null, 'unknown');
