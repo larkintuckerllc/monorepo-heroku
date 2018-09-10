@@ -6,7 +6,7 @@ if [ $exit_status -eq 0 ]; then
     echo "POSTINSTALL: Building packages in build file"
     while read -r package; do
       if [ -d "packages/$package" ]; then
-        echo "POSTINSTALL: Building $packages"
+        echo "POSTINSTALL: Building $package"
         npm run lerna -- run --scope $package build-ts
         exit_status=$?
         if [ $exit_status -ne 0 ]; then
