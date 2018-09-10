@@ -4,10 +4,7 @@ exit_status=$?
 if [ $exit_status -eq 0 ]; then
   if [ -f build ]; then
     echo "POSTINSTALL: Building packages in build file"
-    while read -r line; do
-      echo $line
-    done < build
-    for package in "${packages[@]}"; do
+    while read -r package; do
       if [ -d "packages/$package" ]; then
         echo "POSTINSTALL: Building $packages"
         npm run lerna -- run --scope $package build-ts
@@ -19,7 +16,7 @@ if [ $exit_status -eq 0 ]; then
         echo "POSTINSTALL: ERROR - Package $package in build file does not exist"
         exit 1
       fi
-    done
+    done < build
   else
     echo "POSTINSTALL: Building all packages"
     npm run build-ts
