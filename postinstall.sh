@@ -1,9 +1,10 @@
+IFS=$'\n'
 npm run bootstrap
 exit_status=$?
 if [ $exit_status -eq 0 ]; then
   if [ -f build ]; then
     echo "POSTINSTALL: Building packages in build file"
-    IFS=$'\n' read -d '' -r -a packages < build
+    read -a packages < build
     for package in "${packages[@]}"; do
       if [ -d "packages/$package" ]; then
         echo "POSTINSTALL: Building $packages"
