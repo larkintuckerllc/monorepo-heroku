@@ -5,6 +5,7 @@
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "build-ts": "lerna run build-ts",
+    "lerna": "lerna",
     "lint": "lerna run lint",
     "postinstall": "sh postinstall.sh",
     "test": "lerna run test"
